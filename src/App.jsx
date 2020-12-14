@@ -5,21 +5,25 @@ import {
   Route,
 } from 'react-router-dom';
 import Navbar from './Components/Navbar';
+import Contact from './Pages/Contact';
 
 import Home from './Pages/Home';
 import Product from './Pages/Product';
+import Shop from './Pages/Shop';
 
 function App() {
   return (
-    <Container className="App">
+    <div style={{ overflowX: 'hidden' }} className="App">
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/product" component={Product}/>
+          <Route path="/shop" component={Shop}/>
+          <Route path="/contact" component={Contact}/>
+          <Route path="/product/:id" component={Product}/>
           <Route path="/" component={Home}/>
         </Switch>
       </Router>
-    </Container>
+    </div>
   );
 }
 

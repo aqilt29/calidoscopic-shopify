@@ -6,6 +6,8 @@ import { Client as Styletron } from "styletron-engine-atomic";
 import App from './App';
 import ShopProvider from './Context/shopifyContext';
 
+import { CloudinaryContext } from 'cloudinary-react';
+
 const debug = process.env.NODE_ENV === "production" ? void 0 : new DebugEngine();
 
 const engine = new Styletron();
@@ -15,12 +17,14 @@ console.log(process.env)
 
 ReactDOM.render(
   <React.StrictMode>
-    <ShopProvider>
-      <StyletronProvider value={engine} debug={debug} debugAfterHydration>
-        <StyleReset />
-        <App />
-      </StyletronProvider>
-    </ShopProvider>
+    <CloudinaryContext cloudName={process.env.REACT_APP_CLOUDINARY_CLOUDNAME} >
+      <ShopProvider>
+        <StyletronProvider value={engine} debug={debug} debugAfterHydration>
+          <StyleReset />
+          <App />
+        </StyletronProvider>
+      </ShopProvider>
+    </CloudinaryContext>
   </React.StrictMode>,
   document.getElementById('root')
 );

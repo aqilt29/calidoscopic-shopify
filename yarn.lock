@@ -1175,6 +1175,11 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@brainhubeu/react-carousel@^1.19.26":
+  version "1.19.26"
+  resolved "https://registry.yarnpkg.com/@brainhubeu/react-carousel/-/react-carousel-1.19.26.tgz#57de7b934596ede7a42ab07c46e5942574180447"
+  integrity sha512-+YO8cJrJEk+QDZTQM+i7ct5Ouy0LyoVHQD4fomdsV+3AQmWUkMVZNBYmxFMvhRQVFKreTTzyKuGPkhDKilL/CQ==
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -3315,6 +3320,19 @@ clone-deep@^4.0.1:
     is-plain-object "^2.0.4"
     kind-of "^6.0.2"
     shallow-clone "^3.0.0"
+
+cloudinary-core@^2.11.3:
+  version "2.11.3"
+  resolved "https://registry.yarnpkg.com/cloudinary-core/-/cloudinary-core-2.11.3.tgz#1440f61c6280485094aac87021b7e10f746dc69e"
+  integrity sha512-ZRnpjSgvx+LbSf+aEz5NKzxDB4Z0436aY/0BSDa90kAHiwAyd84VyEi95I74SE80e15Ri9t5S2xtksTXpzk9Xw==
+
+cloudinary-react@^1.6.8:
+  version "1.6.8"
+  resolved "https://registry.yarnpkg.com/cloudinary-react/-/cloudinary-react-1.6.8.tgz#e13b229553521aa375db655e9e8a5d3a5a087ca2"
+  integrity sha512-2NSX45MEXT9v1l8XqIebgs+gBiGycjz0VbhvK8VgNWBuTstsbBMxMcaF/0oW9sBh4alZN6odVJaRsQpnHnFnIQ==
+  dependencies:
+    cloudinary-core "^2.11.3"
+    prop-types "^15.6.2"
 
 co@^4.6.0:
   version "4.6.0"
