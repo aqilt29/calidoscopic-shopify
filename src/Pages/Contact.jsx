@@ -1,13 +1,18 @@
-import { Text } from 'atomize'
+import { Container, Row, Col, Text, Div } from 'atomize'
 import React from 'react'
+import { Image as CloudinaryImage } from 'cloudinary-react'
 
 const Contact = () => {
   return (
-    <div>
-      <Text>
-        Contact
-      </Text>
-    </div>
+    <Container>
+      <Row>
+        <Col d='flex' align="center">
+          <Div d="flex" align="center" maxW="50vw" >
+            <CloudinaryImage publicId="contact/meetTheArtist_q8ag0c" responsive crop="scale"  />
+          </Div>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

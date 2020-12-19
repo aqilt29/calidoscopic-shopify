@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Div, Row, Col, Image, Text, Button, Icon } from 'atomize'
+import { Container, Div, Row, Col, Image, Text, Button, Icon } from 'atomize'
 import LogoIcon from '../../Images/LogoWordBlack.svg'
 import { Link } from 'react-router-dom'
 import MobileDrawer from './mobileDrawer'
@@ -11,7 +11,7 @@ const Navbar = () => {
   const { openCart } = useContext(ShopContext);
 
   return (
-    <Div>
+    <Container>
       <Row justify="space-between">
         <Col p={ {l:{ xs: '1rem', lg: '2rem'}}}>
           <Link to="/">
@@ -63,7 +63,7 @@ const Navbar = () => {
         </Col>
         <Cart />
       </Row>
-    </Div>
+    </Container>
   )
 }
 
