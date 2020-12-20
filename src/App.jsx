@@ -1,4 +1,3 @@
-import { Container } from 'atomize';
 import { 
   BrowserRouter as Router,
   Switch,
@@ -13,7 +12,7 @@ import Shop from './Pages/Shop';
 
 function App() {
   return (
-    <div style={{ overflowX: 'hidden' }} className="App">
+    <div className="App">
       <Router>
         <Navbar />
         <Switch>

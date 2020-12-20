@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from 'react'
-import { Text } from 'atomize'
 
 import { ShopContext } from '../Context/shopifyContext'
 
@@ -13,7 +12,7 @@ const Shop = () => {
 
   }, [fetchAllProducts])
 
-  if (!products) return <Text>Loading...</Text>
+  if (!products) return <p>Loading...</p>
 
   return (
     <div>
