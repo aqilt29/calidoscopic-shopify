@@ -2,8 +2,8 @@ import React, { Component, createContext } from 'react';
 import Shopify from 'shopify-buy';
 
 const client = Shopify.buildClient({
-  storefrontAccessToken: process.env.REACT_APP_SHOPIFY_ACCESS_TOKEN,
-  domain: process.env.REACT_APP_SHOPIFY_DOMAIN
+  storefrontAccessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN,
+  domain: process.env.GATSBY_SHOPIFY_DOMAIN
 })
 
 const ShopContext = createContext();
@@ -23,6 +23,7 @@ class ShopProvider extends Component {
   }
 
   createCheckout = async () => {
+    console.log('creating checkout')
     const checkout = await client.checkout.create();
     console.log(checkout.id, checkout.webUrl)
     this.setState({ checkout: checkout })
