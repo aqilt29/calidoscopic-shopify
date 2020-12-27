@@ -2,11 +2,14 @@ import React from 'react'
 import { GlobalStyle } from './src/styles/globalStyle'
 import { ProductContextProvider } from './src/context/ProductContext';
 import { CartContextProvider } from './src/context/CartContext';
+import { ScrollProvider } from './src/Context/scrollContext'
 
 export const wrapRootElement = ({ element }) => (
   <ProductContextProvider>
     <CartContextProvider>
-      {element}
+      <ScrollProvider>  
+        {element}
+      </ScrollProvider>
     </CartContextProvider>
   </ProductContextProvider>
 );

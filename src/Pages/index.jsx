@@ -7,12 +7,13 @@ export const query = graphql`
     allShopifyProduct {
       edges {
         node {
+          createdAt
           handle
           title
           images {
             localFile {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 700) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
@@ -34,9 +35,7 @@ const index = ({ data }, ...props) => {
 
   return (
     <Layout>
-      <div>
-        <HomePageImageGallery products={listOfAllProducts} />
-      </div>
+      <HomePageImageGallery products={listOfAllProducts} />
     </Layout>
   )
 }

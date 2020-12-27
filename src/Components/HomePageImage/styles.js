@@ -6,10 +6,10 @@ const widthSelector = (index) => {
 
   switch (index) {
     case 0:
-      width = "50%";
+      width = "70%";
       break;
     case 1:
-      width = "42%";
+      width = "100%";
       break;
     case 2:
       width = "33%";
@@ -65,6 +65,16 @@ const paddingSelector = (index) => {
 
 }
 
+
+const positions = {
+  center: `
+    
+  `,
+  left: ``,
+  right: ``,
+}
+
+
 export const ImageContainer = styled.div`
   
   ${props => console.log(props)}
@@ -72,7 +82,7 @@ export const ImageContainer = styled.div`
   @media ${device.tablet} {
     width: ${({index}) => widthSelector(index)};
     margin-bottom: 2rem;
-    margin-right: auto;
+    margin-right: 2rem;
   }
 
 `

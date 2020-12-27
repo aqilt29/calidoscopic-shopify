@@ -5,10 +5,13 @@ import background from '../../Images/marbledTumeric.png'
 export const LayoutContainer = styled.div`
   background-image: url(${background});
   background-size: cover;
-  background-position: center center;
+  /* background-position: center center; */
   width: 100vw;
-  height: 100vh;
   overflow-x: hidden;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 `;
 
 export const LayoutOverlay = styled.div`
@@ -19,7 +22,7 @@ export const LayoutOverlay = styled.div`
 `;
 
 export const PageSpacer = styled.div`
-  padding: 3.5rem 0;
+  padding: 4rem 0;
 
   @media ${device.tablet} {
     padding: 6rem 0;
