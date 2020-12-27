@@ -1,2 +1,2 @@
 export * from './layout';
-export * from './HomePageImages';
+export * from './HomePageImageGallery';

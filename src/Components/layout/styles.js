@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-// import background from '../../Images/calidoscopic-bg.jpg'
+import { device } from '../../device';
 import background from '../../Images/marbledTumeric.png'
 
 export const LayoutContainer = styled.div`
@@ -15,5 +15,13 @@ export const LayoutOverlay = styled.div`
   background: rgba(255, 255, 255, 0.5);
   z-index: 3;
   width: 100vw;
-  height: 100vh;
+  height: auto;
+`;
+
+export const PageSpacer = styled.div`
+  padding: 3.5rem 0;
+
+  @media ${device.tablet} {
+    padding: 6rem 0;
+  }
 `;

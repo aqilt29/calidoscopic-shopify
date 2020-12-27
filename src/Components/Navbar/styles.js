@@ -6,15 +6,22 @@ import { FaBars } from 'react-icons/fa'
 import CalidoscopicLogo from '../../Images/LogoWordBlack.svg'
 
 export const NavBarContainer = styled.div`
+  background-color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   height: 56px;
   padding: .5rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 970;
 
   @media ${device.tablet} {
     padding-top: 2rem;
+    background-color: transparent;
   }
 
   @media ${device.laptop} {
