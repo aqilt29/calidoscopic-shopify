@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout } from '../Components'
+import { Layout, HomePageImages } from '../Components'
 
 
 const index = (props) => {
@@ -8,7 +8,7 @@ const index = (props) => {
 
   return (
     <Layout>
-      <p>All the images will load here</p>
+      <HomePageImages />
     </Layout>
   )
 }
