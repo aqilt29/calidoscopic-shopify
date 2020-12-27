@@ -2,9 +2,10 @@ import React from 'react'
 import { ImageContainer } from './styles';
 import Image from 'gatsby-image';
 
-const HomePageImage = ({ imageSrc: { childImageSharp: { fluid } } }) => {
+const HomePageImage = ({ imageSrc: { childImageSharp: { fluid } }, index }) => {
+  
   return (
-    <ImageContainer>
+    <ImageContainer index={index}>
       <Image fluid={fluid} />
     </ImageContainer>
   )

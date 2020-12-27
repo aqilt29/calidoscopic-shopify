@@ -5,7 +5,9 @@ import { CartContextProvider } from './src/context/CartContext';
 
 export const wrapRootElement = ({ element }) => (
   <ProductContextProvider>
-    <CartContextProvider>{element}</CartContextProvider>
+    <CartContextProvider>
+      {element}
+    </CartContextProvider>
   </ProductContextProvider>
 );
 

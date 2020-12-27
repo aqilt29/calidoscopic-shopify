@@ -34,7 +34,9 @@ const index = ({ data }, ...props) => {
 
   return (
     <Layout>
-      <HomePageImageGallery products={listOfAllProducts} />
+      <div>
+        <HomePageImageGallery products={listOfAllProducts} />
+      </div>
     </Layout>
   )
 }

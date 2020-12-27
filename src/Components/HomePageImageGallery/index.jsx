@@ -3,7 +3,6 @@ import _ from 'lodash'
 import { WallImagesContainer } from './styles';
 import { HomePageImage } from '../HomePageImage'
 
-
 const HomePageImageGallery = ({ products }, ...props) => {
 
   console.log('gallery', props)
@@ -14,7 +13,7 @@ const HomePageImageGallery = ({ products }, ...props) => {
   return (
     <WallImagesContainer>
       {
-        sortedProducts.map(({ node: { handle, images: [ {localFile} ] } }, idx) => <HomePageImage key={idx} imageSrc={localFile} /> )
+        sortedProducts.map(({ node: { handle, images: [ {localFile} ] } }, idx) => <HomePageImage key={idx} index={idx} imageSrc={localFile} /> )
       }
     </WallImagesContainer>
   )

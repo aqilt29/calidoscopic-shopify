@@ -1,10 +1,78 @@
 import styled from 'styled-components'
 import { device } from '../../device';
 
-export const ImageContainer = styled.div`
-  width: ${Math.floor(Math.random() * Math.floor(85))};
+const widthSelector = (index) => {
+  let width;
 
-  @media ${device.mobileL} {
-    width: 100%;
+  switch (index) {
+    case 0:
+      width = "50%";
+      break;
+    case 1:
+      width = "42%";
+      break;
+    case 2:
+      width = "33%";
+      break;
+    case 3:
+      width = "37%";
+      break;
+    case 4:
+      width = "60%";
+      break;
+    case 5:
+      width = "40%";
+      break;
+    case 5:
+      width = "70%";
+      break;
+    case 6:
+      width = "33%";
+      break;
+    case 7:
+      width = "50%";
+      break;
+    case 8:
+      width = "40%";
+      break;
+    case 9:
+      width = "45%";
+      break;
+    case 10:
+      width = "45%";
+      break;
+    case 11:
+      width = "30%";
+      break;
+    case 12:
+      width = "40%";
+      break;
+    case 13:
+      width = "47%";
+      break;
+    case 14:
+      width = "50%";
+      break;
+    default:
+      width = "37%";
   }
-`;
+
+  return width
+}
+
+
+const paddingSelector = (index) => {
+
+}
+
+export const ImageContainer = styled.div`
+  
+  ${props => console.log(props)}
+
+  @media ${device.tablet} {
+    width: ${({index}) => widthSelector(index)};
+    margin-bottom: 2rem;
+    margin-right: auto;
+  }
+
+`

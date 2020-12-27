@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby'
 import { device } from '../../device'
-
 import { FaBars } from 'react-icons/fa'
-import CalidoscopicLogo from '../../Images/LogoWordBlack.svg'
+
 
 export const NavBarContainer = styled.div`
   background-color: white;
@@ -25,7 +24,7 @@ export const NavBarContainer = styled.div`
   }
 
   @media ${device.laptop} {
-    padding-top: 4rem;
+    padding-top: 3rem;
   }
 `;
 
