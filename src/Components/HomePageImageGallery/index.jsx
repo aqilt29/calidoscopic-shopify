@@ -5,9 +5,6 @@ import { HomePageImage } from '../HomePageImage'
 
 const HomePageImageGallery = ({ products, ...props}) => {
 
-  console.log('gallery', props)
-
-  console.log(products)
   const sortedProducts = _.sortBy(products, [({ node }) => node.createdAt]).reverse()
 
   return (

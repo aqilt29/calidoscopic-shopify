@@ -27,7 +27,6 @@ export const query = graphql`
 
 
 const index = ({ data }, ...props) => {
-  console.log(props)
 
   const { allShopifyProduct: { edges: listOfAllProducts } } = data;
   
