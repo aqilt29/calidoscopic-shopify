@@ -1,28 +1,12 @@
 import React, { useContext, useEffect } from 'react'
-
-import { ShopContext } from '../Context/shopifyContext'
-
+import { Layout } from '../Components'
 
 const Shop = () => {
 
-  const { fetchAllProducts, products } = useContext(ShopContext)
-
-  useEffect(() => {
-    fetchAllProducts()
-
-  }, [fetchAllProducts])
-
-  if (!products) return <p>Loading...</p>
-
   return (
-    <div>
+    <Layout>
       Shop
-      <div>
-        {products && products.map((product) => {
-          return <pre key={product.id}>{JSON.stringify(product.title, null, 2)}</pre>
-        })}
-      </div>
-    </div>
+    </Layout>
   )
 }
 
