@@ -26,12 +26,10 @@ export const query = graphql`
 `;
 
 
-const index = ({ data }, ...props) => {
+const index = ({ data }) => {
 
   const { allShopifyProduct: { edges: listOfAllProducts } } = data;
   
-
-
   return (
     <Layout>
       <HomePageImageGallery products={listOfAllProducts} />
