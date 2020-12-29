@@ -6,9 +6,8 @@ import {
   LinksContainer,
   LogoLink,
   NavBarContainer,
-  NavLink,
+  ActiveAwareLink,
 } from './styles'
-
 
 const Navbar = (...props) => {
 
@@ -18,10 +17,10 @@ const Navbar = (...props) => {
           <img src={CalidoscopicLogo} />
       </LogoLink>
       <LinksContainer>
-        <NavLink to="/About">About</NavLink>
-        <NavLink to="/Contact">Contact</NavLink>
-        <NavLink to="/Shop">Shop</NavLink>
-        <NavLink to="/">Cart</NavLink>
+        <ActiveAwareLink to="/About">About</ActiveAwareLink>
+        <ActiveAwareLink to="/Contact">Contact</ActiveAwareLink>
+        <ActiveAwareLink to="/Shop">Shop</ActiveAwareLink>
+        <ActiveAwareLink to="/">Cart</ActiveAwareLink>
       </LinksContainer>
       <Hamburger viewBox="-120 -90 700 700" />
     </NavBarContainer>
