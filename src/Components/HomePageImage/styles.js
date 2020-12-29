@@ -48,7 +48,7 @@ export const ImageContainer = styled.div`
 
   @media ${device.tablet} {
     margin-bottom: 2rem;
-
+    max-height: 60vh;
     ${({index}) => findLocationFromIndex(index)}
   }
 `;

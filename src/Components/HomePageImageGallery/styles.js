@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { device } from '../../device'
 
 export const WallImagesContainer = styled.div`
-  /* max-width: 1300px; */
   padding: 0 0;
   display: flex;
   flex-direction: column;
@@ -13,6 +12,12 @@ export const WallImagesContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  @media ${device.laptop} {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
