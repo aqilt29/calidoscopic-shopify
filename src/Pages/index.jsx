@@ -1,14 +1,38 @@
 import React from 'react'
-import { Layout } from '../Components'
+import { Layout, HomePageImageGallery } from '../Components'
+import { graphql } from 'gatsby';
+
+export const query = graphql`
+  query ProductListQuery {
+    allShopifyProduct {
+      edges {
+        node {
+          createdAt
+          handle
+          title
+          images {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 700) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 
-const index = (props) => {
+const index = ({ data }) => {
 
-  console.log(props)
-
+  const { allShopifyProduct: { edges: listOfAllProducts } } = data;
+  
   return (
     <Layout>
-      <p>All the images will load here</p>
+      <HomePageImageGallery products={listOfAllProducts} />
     </Layout>
   )
 }

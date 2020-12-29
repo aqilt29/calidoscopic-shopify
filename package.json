@@ -20,6 +20,7 @@
     "gatsby-source-filesystem": "^2.8.0",
     "gatsby-source-shopify": "^3.7.0",
     "gatsby-transformer-sharp": "^2.9.0",
+    "lodash": "^4.17.20",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hamburger-menu": "^1.2.1",
@@ -33,7 +34,7 @@
     "styled-components": "^5.2.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "gatsby develop",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

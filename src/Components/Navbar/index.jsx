@@ -6,8 +6,6 @@ import { Hamburger, LogoLink, NavBarContainer } from './styles'
 
 const Navbar = (...props) => {
 
-  console.log(props)
-
   return (
     <NavBarContainer>
       <LogoLink to="/">
