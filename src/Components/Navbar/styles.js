@@ -75,8 +75,6 @@ export const NavLink = styled(Link)`
   font-size: 1.7rem;
   color: black;
 
-  ${(props) => console.log(props)}
-
 `;
 
 
