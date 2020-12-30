@@ -4,6 +4,7 @@ import { device } from '../../device'
 import { FaBars } from 'react-icons/fa'
 import { detectScroll } from '../../Context/scrollContext';
 import background from '../../Images/marbledTumeric.png'
+import React from 'react'
 
 export const NavBarContainer = detectScroll(styled.div`
 
@@ -62,16 +63,23 @@ export const LinksContainer = styled.div`
 
   display: flex;
   margin-right: auto;
-  width: 40vw;
+  align-items: center;
   justify-content: flex-end;
 `;
 
 export const NavLink = styled(Link)`
   text-decoration: none;
-
   display: block;
   margin-left: 2rem;
   font-family: Jura;
   font-size: 1.7rem;
   color: black;
+
 `;
+
+
+export const ActiveAwareLink = ({ color = "white", ...props }) => {
+  return (
+    <NavLink activeStyle={{ color }} {...props} />
+  )
+}
