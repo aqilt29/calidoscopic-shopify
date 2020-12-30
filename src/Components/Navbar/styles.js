@@ -63,7 +63,7 @@ export const LinksContainer = styled.div`
 
   display: flex;
   margin-right: auto;
-  width: 40vw;
+  align-items: center;
   justify-content: flex-end;
 `;
 

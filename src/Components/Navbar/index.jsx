@@ -9,6 +9,7 @@ import {
   ActiveAwareLink,
 } from './styles'
 import MobileNav from './MobileNav'
+import { InstagramLinkIcon } from './MobileNav/styles'
 
 const Navbar = (...props) => {
 
@@ -24,6 +25,7 @@ const Navbar = (...props) => {
         <ActiveAwareLink to="/Contact">Contact</ActiveAwareLink>
         <ActiveAwareLink to="/Shop">Shop</ActiveAwareLink>
         <ActiveAwareLink to="/">Cart</ActiveAwareLink>
+        <InstagramLinkIcon href="https://instagram.com/calidoscopic?igshid=ln26g6qsfo7l" target="__blank" />
       </LinksContainer>
       <Hamburger onClick={() => setIsOpen(!isOpen)} viewBox="-120 -90 700 700" />
       <MobileNav isOpen={isOpen} toggleDrawer={setIsOpen} />
