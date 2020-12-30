@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useState } from 'react'
 import { graphql, Link } from 'gatsby'
 import CalidoscopicLogo from '../../Images/LogoWordBlack.svg'
 import {
@@ -8,8 +8,11 @@ import {
   NavBarContainer,
   ActiveAwareLink,
 } from './styles'
+import MobileNav from './MobileNav'
 
 const Navbar = (...props) => {
+
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <NavBarContainer>
@@ -22,7 +25,8 @@ const Navbar = (...props) => {
         <ActiveAwareLink to="/Shop">Shop</ActiveAwareLink>
         <ActiveAwareLink to="/">Cart</ActiveAwareLink>
       </LinksContainer>
-      <Hamburger viewBox="-120 -90 700 700" />
+      <Hamburger onClick={() => setIsOpen(!isOpen)} viewBox="-120 -90 700 700" />
+      <MobileNav isOpen={isOpen} toggleDrawer={setIsOpen} />
     </NavBarContainer>
   )
 }
