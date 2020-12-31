@@ -1,10 +1,10 @@
 import React from 'react'
-import { Layout } from '../Components';
+import { Layout, ContactForm } from '../Components';
 
 const Contact = () => {
   return (
     <Layout>
-          <p>Contact page</p>
+      <ContactForm />
     </Layout>
   )
 }

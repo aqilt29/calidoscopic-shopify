@@ -19,12 +19,17 @@ export const BioImageWrapper = styled.div`
   padding-bottom: 2rem;
 
   @media ${device.laptop} {
-    min-width: 30vw;
+    min-width: 45vw;
   }
 `;
 
 export const BioHeader = styled.h2`
-  padding-bottom: 1rem;
+  padding: 1rem 0;
+
+  background-color: rgba(235,235,235,.15);
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
 `;
 
 export const BioParagraph = styled.p`
@@ -60,7 +65,7 @@ export const BioAboutBlockWrapper = styled.div`
 export const LargeScreenBioWrapper = styled.div`
   display: contents;
 
-  @media ${device.laptopL} {
+  @media ${device.laptop} {
     display: flex;
     flex-direction: row;
   }

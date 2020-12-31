@@ -27,4 +27,5 @@ export const PageSpacer = styled.div`
   @media ${device.tablet} {
     padding: 6rem 0;
   }
+
 `;
