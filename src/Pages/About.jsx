@@ -1,10 +1,13 @@
 import React from 'react'
+import Img from 'gatsby-image';
 import { Layout } from '../Components'
+import AboutBio from '../Components/AboutBio';
+
 
 const About = () => {
   return (
     <Layout>
-      about page
+      <AboutBio />
     </Layout>
   )
 }
