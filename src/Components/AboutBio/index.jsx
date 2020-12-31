@@ -1,9 +1,8 @@
 import React from 'react'
-import { BioContainer, BioHeader, BioImageWrapper, BioParagraph } from './styles'
+import { BioAboutBlockWrapper, BioContainer, BioHeader, BioImageWrapper, BioParagraph, BioTextContentWrapper, LargeScreenBioWrapper } from './styles'
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby'
 import { bioText } from '../../Utils/bioText';
-
 
 const AboutBio = () => {
 
@@ -33,16 +32,19 @@ const AboutBio = () => {
 
   return (
     <BioContainer>
-      <BioImageWrapper>
-        <Img fluid={bioFluidSrc} />
-      </BioImageWrapper>
-      <BioHeader>About the Artist</BioHeader>
-      <BioParagraph>{bioText.background}</BioParagraph>
-      <BioHeader>Statement</BioHeader>
-      <BioParagraph>{bioText.statement}</BioParagraph>
-      <div>
-        <p>Instagram CTA</p>
-      </div>
+      <LargeScreenBioWrapper>
+        <BioImageWrapper>
+          <Img fluid={bioFluidSrc} />
+        </BioImageWrapper>
+        <BioAboutBlockWrapper isAbout>
+          <BioHeader>About the Artist</BioHeader>
+          <BioParagraph>{bioText.background}</BioParagraph>
+        </BioAboutBlockWrapper>
+      </LargeScreenBioWrapper>
+      <BioAboutBlockWrapper>
+        <BioHeader>Statement</BioHeader>
+        <BioParagraph>{bioText.statement}</BioParagraph>
+      </BioAboutBlockWrapper>
     </BioContainer>
   )
 }

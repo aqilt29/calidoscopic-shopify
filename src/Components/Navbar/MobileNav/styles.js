@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import { Link } from 'gatsby';
 import { FaInstagram } from 'react-icons/fa'
+import { device } from '../../../device';
 
 //  dont seem to be able to apply styling here
 export const MobileNavContainer = styled(SwipeableDrawer)`
