@@ -19,9 +19,9 @@ const MobileLink = ({title, to, ...props}) => {
 
 const links = [
   { to: "/", title: 'Home' },
-  { to: "/About", title: 'About' },
-  { to: "/Contact", title: 'Contact' },
-  { to: "/Shop", title: 'Shop' },
+  { to: "/about", title: 'About' },
+  { to: "/contact", title: 'Contact' },
+  { to: "/shop", title: 'Shop' },
 ]
 
 const MobileNav = ({ isOpen, toggleDrawer }) => {
