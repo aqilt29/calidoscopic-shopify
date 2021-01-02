@@ -36,6 +36,8 @@ export const BioParagraph = styled.p`
   line-height: 1.5;
   font-weight: 200;
   padding: 1rem 0;
+
+
 `;
 
 
@@ -47,7 +49,8 @@ export const BioTextContentWrapper = styled.div`
 
 export const BioAboutBlockWrapper = styled.div`
   display: contents;
-
+  padding: 0 2rem;
+  
   @media ${device.laptop} {
     display: flex;
     flex-direction: column;

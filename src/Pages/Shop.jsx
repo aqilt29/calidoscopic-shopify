@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react'
-import { Layout } from '../Components'
+import { Layout, UnderConstruction } from '../Components'
 
 const Shop = () => {
 
   return (
     <Layout>
-      Shop
+      <UnderConstruction />
     </Layout>
   )
 }

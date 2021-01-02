@@ -9,9 +9,10 @@ import {
   InstagramLinkIcon,
 } from './styles';
 
-const MobileLink = ({title, to, ...props}) => {
+const MobileLink = ({ title, to, ...props }) => {
+
   return (
-    <MobileLinkWrapper>
+    <MobileLinkWrapper {...props}>
       <MobileDrawerLink to={to} {...props}>{title}</MobileDrawerLink>
     </MobileLinkWrapper>
   )
@@ -19,9 +20,9 @@ const MobileLink = ({title, to, ...props}) => {
 
 const links = [
   { to: "/", title: 'Home' },
-  { to: "/About", title: 'About' },
-  { to: "/Contact", title: 'Contact' },
-  { to: "/Shop", title: 'Shop' },
+  { to: "/about", title: 'About' },
+  { to: "/contact", title: 'Contact' },
+  { to: "/shop", title: 'Shop', underConstruction: true },
 ]
 
 const MobileNav = ({ isOpen, toggleDrawer }) => {

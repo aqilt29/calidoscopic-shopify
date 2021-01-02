@@ -21,10 +21,10 @@ const Navbar = (...props) => {
           <img src={CalidoscopicLogo} />
       </LogoLink>
       <LinksContainer>
-        <ActiveAwareLink to="/About">About</ActiveAwareLink>
-        <ActiveAwareLink to="/Contact">Contact</ActiveAwareLink>
-        <ActiveAwareLink to="/Shop">Shop</ActiveAwareLink>
-        <ActiveAwareLink to="/">Cart</ActiveAwareLink>
+        <ActiveAwareLink to="/about">About</ActiveAwareLink>
+        <ActiveAwareLink to="/contact">Contact</ActiveAwareLink>
+        <ActiveAwareLink underConstruction to="/shop">Shop</ActiveAwareLink>
+        {/* <ActiveAwareLink to="/">Cart</ActiveAwareLink> */}
         <InstagramLinkIcon href="https://instagram.com/calidoscopic?igshid=ln26g6qsfo7l" target="__blank" />
       </LinksContainer>
       <Hamburger onClick={() => setIsOpen(!isOpen)} viewBox="-120 -90 700 700" />
