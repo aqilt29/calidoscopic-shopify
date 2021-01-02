@@ -1,10 +1,34 @@
 import React from 'react';
-import { PageOverlay } from './styles';
+import { ContentWrapper,
+  OpacityLayer,
+  PageOverlay,
+  HeaderWrapper,
+  HeaderText
+} from './styles';
+
+import { Img } from 'gatsby-image';
+import { graphql, useStaticQuery } from 'gatsby';
+
+
+
+
 
 const UnderConstruction = () => {
   return (
     <PageOverlay>
-      <p>hello</p>
+      <OpacityLayer>
+        <ContentWrapper>
+          <HeaderWrapper>
+            <HeaderText>Under Construction</HeaderText>
+          </HeaderWrapper>
+          <HeaderWrapper>
+            <HeaderText>Come Back Soon</HeaderText>
+          </HeaderWrapper>
+          <HeaderWrapper>
+            <HeaderText>Under Construction</HeaderText>
+          </HeaderWrapper>
+        </ContentWrapper>
+      </OpacityLayer>
     </PageOverlay>
   )
 }
