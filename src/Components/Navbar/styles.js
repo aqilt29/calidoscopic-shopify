@@ -75,11 +75,37 @@ export const NavLink = styled(Link)`
   font-size: 1.7rem;
   color: black;
 
+  ${props => props.underConstruction && `
+    opacity: .2;
+  `}
+
+`;
+
+const LinkWrapper = styled.div`
+  display: contents;
+
+  ${props => props.underConstruction && `
+    pointer-events: none;
+    cursor: default;
+    
+    ::before {
+      font-family: Jura;
+      position: fixed;
+      content: "Coming Soon";
+      font-weight: 700;
+
+      margin-right: 6rem;
+
+    }
+  `}
+
 `;
 
 
 export const ActiveAwareLink = ({ color = "white", ...props }) => {
   return (
-    <NavLink activeStyle={{ color }} {...props} />
+    <LinkWrapper {...props} >
+      <NavLink activeStyle={{ color }} {...props} />
+    </LinkWrapper>
   )
 }
