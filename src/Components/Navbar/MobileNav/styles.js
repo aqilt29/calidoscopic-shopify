@@ -16,12 +16,35 @@ export const MobileDrawerLink = styled(Link)`
   font-size: 1.7rem;
   color: black;
 
+  ${props => props.underConstruction && `
+    color: grey;
+    opacity: .3;
+
+    pointer-events: none;
+    cursor: default;
+  `}
 `;
 
 //  wraps each link to provide some styles
 export const MobileLinkWrapper = styled.div`
   text-align: center;
   padding: 1rem;
+
+  ${console.log}
+
+  ${props => props.underConstruction && `
+
+    ::before {
+      font-family: Jura;
+      position: absolute;
+      content: "Coming Soon";
+      left: 3.4rem;
+      top: 25rem;
+
+      font-weight: 700;
+    }
+
+  `}
 `;
 
 //  div within the drawer to customize
