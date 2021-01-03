@@ -25,5 +25,5 @@ yarn-error.log*
 .env
 
 .cache
-public
+public/*
 .eslintcache
