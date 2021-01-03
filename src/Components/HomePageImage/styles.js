@@ -45,6 +45,7 @@ const findLocationFromIndex = (indexOfImage) => {
 
 
 export const ImageContainer = styled.div`
+  position: relative;
 
   @media ${device.tablet} {
     margin-bottom: 2rem;
@@ -52,3 +53,13 @@ export const ImageContainer = styled.div`
     ${({index}) => findLocationFromIndex(index)}
   }
 `;
+
+export const DescriptionContainer = styled.div`
+  background-color: rgba(128,128,128,.5);
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+`;  
