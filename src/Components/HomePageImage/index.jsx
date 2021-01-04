@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
-import { DescriptionContainer, ImageContainer } from './styles';
+import {
+  DescriptionContainer,
+  ImageContainer,
+  DescriptionTextWrapper,
+  ArtworkTitle,
+  ArtworkDescription
+} from './styles';
 import Image from 'gatsby-image';
 
-const HomePageImage = ({ imageSrc: { childImageSharp: { fluid } }, index, description }) => {
+const HomePageImage = ({ imageSrc: { childImageSharp: { fluid } }, index, description, title }) => {
 
   const [showModal, setShowModal] = useState(false);
 
@@ -13,7 +19,10 @@ const HomePageImage = ({ imageSrc: { childImageSharp: { fluid } }, index, descri
     >
       { showModal && (
         <DescriptionContainer>
-          <p>hello world</p>
+          <DescriptionTextWrapper>
+            <ArtworkTitle>{title}</ArtworkTitle>
+            <ArtworkDescription>{description}</ArtworkDescription>
+          </DescriptionTextWrapper>
         </DescriptionContainer>
       )}
       <Image fluid={fluid} />

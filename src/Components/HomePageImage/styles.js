@@ -55,11 +55,34 @@ export const ImageContainer = styled.div`
 `;
 
 export const DescriptionContainer = styled.div`
-  background-color: rgba(128,128,128,.5);
+  background-color: rgba(128,128,128,.8);
   position: absolute;
   z-index: 10;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
+
+  display: flex;
 `;  
+
+export const DescriptionTextWrapper = styled.div`
+  margin: auto auto;
+  padding: 3rem;
+`;
+
+export const ArtworkTitle = styled.h2`
+  font-family: Jura;
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+  display: block;
+`;
+
+
+export const ArtworkDescription = styled.p`
+  display: block;
+  color: white;
+  font-weight: 600;
+  font-style: italic;
+`;

@@ -10,10 +10,10 @@ const HomePageImageGallery = ({ products }) => {
     <WallImagesContainer>
       {
         sortedProducts.map((node, idx) => {
-          const { node: { handle, description ,images: [ {localFile} ] }  } = node;
+          const { node: { handle, description ,images: [ {localFile} ], ...rest }  } = node;
 
           return (
-            <HomePageImage key={idx} index={idx} imageSrc={localFile} description={description} />
+            <HomePageImage key={idx} index={idx} imageSrc={localFile} description={description} {...rest} />
           )
         })
       }
