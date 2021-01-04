@@ -10,6 +10,7 @@ export const query = graphql`
           createdAt
           handle
           title
+          description
           images {
             localFile {
               childImageSharp {

@@ -25,7 +25,7 @@ module.exports = {
       options: {
         fonts: [
           `jura\:400,700`,
-          `source sans pro\:200`
+          `source sans pro\:200,600i`
         ],
         display: 'swap'
       }
